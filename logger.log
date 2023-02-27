@@ -1,0 +1,8 @@
+{"level":"info","ts":1677514666.9024363,"msg":"Database success connected"}
+{"level":"error","ts":1677514666.9234903,"msg":"ОШИБКА: столбец \"user_balance\" не существует (SQLSTATE 42703)Unable to scan in variable"}
+{"level":"info","ts":1677514736.5182,"msg":"Database success connected"}
+{"level":"error","ts":1677514736.5371313,"msg":"ОШИБКА: столбец \"user_balance\" не существует (SQLSTATE 42703)Unable to scan in variable"}
+{"level":"info","ts":1677514885.7187796,"msg":"Database success connected"}
+{"level":"error","ts":1677514885.739926,"msg":"ОШИБКА: аргумент конструкции WHERE должен иметь тип boolean, а не integer (SQLSTATE 42804)Unable to scan in variable"}
+{"level":"info","ts":1677514910.780327,"msg":"Database success connected"}
+{"level":"info","ts":1677515225.2594333,"msg":"Database success connected"}
