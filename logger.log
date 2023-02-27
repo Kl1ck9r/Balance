@@ -6,3 +6,25 @@
 {"level":"error","ts":1677514885.739926,"msg":"ОШИБКА: аргумент конструкции WHERE должен иметь тип boolean, а не integer (SQLSTATE 42804)Unable to scan in variable"}
 {"level":"info","ts":1677514910.780327,"msg":"Database success connected"}
 {"level":"info","ts":1677515225.2594333,"msg":"Database success connected"}
+{"level":"info","ts":1677525168.434818,"msg":"Database success connected"}
+{"level":"error","ts":1677525168.4684439,"msg":"strconv.ParseFloat: parsing \"EUR\": invalid syntaxFailed to convert rubles to euro"}
+{"level":"info","ts":1677525233.2739067,"msg":"Database success connected"}
+{"level":"error","ts":1677525233.27699,"msg":"strconv.ParseFloat: parsing \"EUR\": invalid syntaxFailed to convert rubles to euro"}
+{"level":"info","ts":1677525337.9696202,"msg":"Database success connected"}
+{"level":"error","ts":1677525337.973881,"msg":"strconv.ParseFloat: parsing \"EUR\": invalid syntaxFailed to convert rubles to euro"}
+{"level":"info","ts":1677525708.0625944,"msg":"Database success connected"}
+{"level":"info","ts":1677525778.992091,"msg":"Database success connected"}
+{"level":"info","ts":1677525830.1049984,"msg":"Database success connected"}
+{"level":"info","ts":1677525856.021098,"msg":"Database success connected"}
+{"level":"info","ts":1677526306.5870883,"msg":"Database success connected"}
+{"level":"info","ts":1677526602.7217748,"msg":"Database success connected"}
+{"level":"info","ts":1677526651.6939085,"msg":"Database success connected"}
+{"level":"info","ts":1677526654.5984907,"msg":"Database success connected"}
+{"level":"info","ts":1677526670.5606565,"msg":"Database success connected"}
+{"level":"info","ts":1677526728.5707223,"msg":"Database success connected"}
+{"level":"info","ts":1677529163.546885,"msg":"Database success connected"}
+{"level":"info","ts":1677529171.8510387,"msg":"Database success connected"}
+{"level":"info","ts":1677529192.2643454,"msg":"Database success connected"}
+{"level":"info","ts":1677529413.8941548,"msg":"Database success connected"}
+{"level":"info","ts":1677529454.1240854,"msg":"Database success connected"}
+{"level":"info","ts":1677529618.658124,"msg":"Database success connected"}

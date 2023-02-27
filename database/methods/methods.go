@@ -12,8 +12,9 @@ type Postgres struct {
 
 	Repository interface {
 		GetBalance(ctx context.Context, userID int64)
-		ChangeBalance(ctx context.Context)
+		TransferBalance(ctx context.Context)
 
+		ChangeCurrency(ctx context.Context)
 		DeleteUserBalance(ctx context.Context, userID int64)
 	}
 }
@@ -32,6 +33,10 @@ func (db Postgres) GetBalance(ctx context.Context, userID int64) (string, string
 	}
 
 	return balance, currency, nil
+}
+
+func (db Postgres)TransferBalance(ctx context.Context){
+	
 }
 
 func (db Postgres) DeleteUserBalance(ctx context.Context, userID int64) {

@@ -7,18 +7,19 @@ import (
 	"net/http"
 
 	"github.com/balance/api/database/methods"
+	"github.com/balance/api/exchange"
 	js_error "github.com/balance/api/utils/error"
 )
 
 type GetUserBalance struct {
-	User int64 `json:"id_user"`
-	Currency string `json:"currency"` // you can choice currency,rubles or dollards
+	User     int64  `json:"id_user"`
+	Currency string `json:"currency"`
 }
 
 type BalanceUser struct {
 	Ok       bool   `json:"ok"`       // true or false
-	Currency string `json:"currency"` // only RUB
-	Balance  string `json:"balance"`  // 200
+	Currency string `json:"currency"` // we have only EURO,DOLLARS,and GERMAN currency
+	Balance  string `json:"balance"`  // balance user(200$,3000₽,5000₴)
 }
 
 func Get(wrt http.ResponseWriter, req *http.Request) {
@@ -33,19 +34,27 @@ func Get(wrt http.ResponseWriter, req *http.Request) {
 	ctx := context.Background()
 	var db methods.Postgres
 	bl, cr, err := db.GetBalance(ctx, get.User)
-	if err!=nil{
-		js.WriteJsError(wrt, fmt.Errorf("Not Found user :%v", err), http.StatusBadRequest)
+	if err != nil {
+		js.WriteJsError(wrt, fmt.Errorf("Not Found user :%w", err), http.StatusBadRequest)
 		return
 	}
 
-	fmt.Println("Balance and Currency: ",bl,cr)
 	balance := &BalanceUser{
 		Ok:       true,
 		Currency: cr,
 		Balance:  bl,
 	}
 
-	decode, err := json.MarshalIndent(&balance,"\n","\t")
+	newCurrency, newBalance, err := exchange.Conv(get.Currency, balance.Balance, wrt) // this method will convert currency if will want user
+	if err != nil {
+		js.WriteJsError(wrt, fmt.Errorf("Unable to convert in another currency :%w", err), http.StatusBadRequest)
+		return
+	}
+
+	balance.Currency = newCurrency
+	balance.Balance = newBalance
+
+	decode, err := json.MarshalIndent(&balance, "\n", "\t")
 	if err != nil {
 		js.WriteJsError(wrt, fmt.Errorf("Marshal json:%v", err), http.StatusBadRequest)
 		return

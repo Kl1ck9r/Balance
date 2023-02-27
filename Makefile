@@ -28,9 +28,11 @@ docker-run:
 .PHONY: docker-stop 
 docker-stop: 
 
-.PHONY: test
-test:
+.PHONY: unit-test
+unit-test:
 
+.PHONY: integrations-test
+integrations-test:
 
 
 .PHONY: clean 
