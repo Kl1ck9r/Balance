@@ -74,6 +74,7 @@ Response :
 }
 ```
 
+
 ```json5
 Request :
 {
@@ -91,16 +92,26 @@ Response :
 }
 ```
 
+
+#### Possible error:
+
+```json5
+{
+    "ok": false,
+    "error": "Not Found user :no rows in result set",
+    "status": 404
+}
+```
+
 ### `/descrease` - Descrease user balance 
 
 * Method: `POST`
-
 
 ```json5
 Request :
 {
    "id_user":1,
-   "amount":200
+   "amount": "200"
 }
 ```
 ```json5
@@ -109,6 +120,15 @@ Response :
     "balance": "4700",
     "currency": "RUB",
     "description": "Amount writter from account:200"
+}
+```
+
+#### Possible error:
+```json5
+{
+    "ok": false,
+    "error": "User not found: no rows in result set ",
+    "status": 404
 }
 ```
 
@@ -127,12 +147,24 @@ Request :
 ```
 
 ```json5
+Response :
 {
     "balance": "4500",
     "currency": "RUB",
     "description": "replenishment amount: 4500"
 }
 ```
+#### Possible error:
+
+```json5
+{
+    "ok": false,
+    "error": "The replenishment amount cannot be less than zero"
+    "status": 400
+}
+```
+
+
 ### `/transaction` - Transaction between users 
 * Method: `POST`
 
@@ -153,6 +185,16 @@ Response :
     "description": "user balance after transaction: 3920"
 }
 ```
+#### Possible error:
+
+```json5
+{
+    "ok": false,
+    "error": "[DB ERROR]: no rows in result set",
+    "status": 400
+}
+```
+
 
 ### `/delete` -  replenish user balance 
 
@@ -171,5 +213,15 @@ Response :
     "user_id": 3,
     "balance": "0",
     "description": "User with this id: 3 Success deleted"
+}
+```
+
+#### Possible error:
+
+```json5
+{
+    "ok": false,
+    "error": "Failed delete user [DB]:Wrong enter user id",
+    "status": 400
 }
 ```

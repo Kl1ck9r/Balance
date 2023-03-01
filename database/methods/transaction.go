@@ -2,11 +2,16 @@ package methods
 
 import (
 	"context"
+	"fmt"
 	"github.com/balance/api/database"
 	"strconv"
 )
 
 func (p Postgres) TransactionBalance(ctx context.Context, toID, fromID int64, amount string) (string, string, error) {
+	if toID <= 0 && fromID <= 0 {
+		return "", "", fmt.Errorf("Wrong enter user id")
+	}
+
 	p.conn = database.ConnectDB()
 	t_amount, _ := strconv.Atoi(amount)
 
@@ -43,6 +48,6 @@ func (p Postgres) TransactionBalance(ctx context.Context, toID, fromID int64, am
 		lgzap.Error(err.Error() + "User from_id not found or balance less than zero")
 		return "", "", err
 	}
-	
-	return conv_balanceToID,conv_balanceFromID ,nil
+
+	return conv_balanceToID, conv_balanceFromID, nil
 }

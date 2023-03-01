@@ -9,6 +9,10 @@ import (
 )
 
 func (db Postgres) GetBalance(ctx context.Context, userID int64) (int64, string, error) {
+	if userID <= 0 {
+		return 0, "", fmt.Errorf("Wrong enter user id")
+	}
+
 	db.conn = database.ConnectDB()
 	getBalance := db.conn.QueryRow(ctx, "SELECT user_balance,currency FROM Balance WHERE user_id=$1", userID)
 

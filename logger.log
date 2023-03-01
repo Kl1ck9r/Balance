@@ -41,3 +41,27 @@
 {"level":"info","ts":1677689190.5413306,"msg":"Database success connected"}
 {"level":"info","ts":1677689190.7242541,"msg":"Database success connected"}
 {"level":"info","ts":1677689190.877157,"msg":"Database success connected"}
+{"level":"info","ts":1677700191.2373998,"msg":"Database success connected"}
+{"level":"info","ts":1677700191.3150625,"msg":"Database success connected"}
+{"level":"error","ts":1677700191.3169918,"msg":"no rows in result setUnable to scan in variable"}
+{"level":"info","ts":1677700994.7969732,"msg":"Database success connected"}
+{"level":"error","ts":1677700994.8332863,"msg":"no rows in result setUnable to scan in variable"}
+{"level":"info","ts":1677701076.0532274,"msg":"Database success connected"}
+{"level":"info","ts":1677701076.127299,"msg":"Database success connected"}
+{"level":"error","ts":1677701076.1296277,"msg":"no rows in result setUnable to scan in variable"}
+{"level":"info","ts":1677701188.267873,"msg":"Database success connected"}
+{"level":"info","ts":1677701188.3722172,"msg":"Database success connected"}
+{"level":"error","ts":1677701188.373365,"msg":"no rows in result setUnable to scan in variable"}
+{"level":"info","ts":1677701188.4475343,"msg":"Database success connected"}
+{"level":"info","ts":1677701253.6464097,"msg":"Database success connected"}
+{"level":"info","ts":1677701253.7269242,"msg":"Database success connected"}
+{"level":"info","ts":1677701253.8115451,"msg":"Database success connected"}
+{"level":"info","ts":1677701253.9151814,"msg":"Database success connected"}
+{"level":"error","ts":1677701253.9174254,"msg":"no rows in result setUnable to scan in variable"}
+{"level":"error","ts":1677701253.9180424,"msg":"no rows in result setUser from_id not found or balance less than zero"}
+{"level":"info","ts":1677701282.928862,"msg":"Database success connected"}
+{"level":"info","ts":1677701283.0233529,"msg":"Database success connected"}
+{"level":"error","ts":1677701283.0259118,"msg":"no rows in result setUnable to scan in variable"}
+{"level":"info","ts":1677701289.5391412,"msg":"Database success connected"}
+{"level":"info","ts":1677701289.618985,"msg":"Database success connected"}
+{"level":"error","ts":1677701289.622271,"msg":"no rows in result setUnable to scan in variable"}

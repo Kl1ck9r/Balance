@@ -2,6 +2,7 @@ package methods
 
 import (
 	"context"
+	"fmt"
 	"github.com/balance/api/database"
 	"github.com/balance/api/utils/zap"
 	"github.com/jackc/pgx/v5"
@@ -23,6 +24,10 @@ type Postgres struct {
 var lgzap, _ = zap.InitLogger()
 
 func (db Postgres) ReplenishBalance(ctx context.Context, userID int64, balance, currency string) error {
+	if userID <= 0 {
+		return fmt.Errorf("Wrong enter user id")
+	}
+
 	db.conn = database.ConnectDB()
 	_, _, exists := db.GetBalance(ctx, userID)
 	if exists != nil {

@@ -2,11 +2,16 @@ package methods
 
 import (
 	"context"
+	"fmt"
 	"github.com/balance/api/database"
 	"strconv"
 )
 
 func (db Postgres) DescreaseUserBalance(ctx context.Context, userID int64, amount string) error {
+	if userID <= 0 {
+		return fmt.Errorf("Wrong enter user id")
+	}
+
 	db.conn = database.ConnectDB()
 	t_amount, _ := strconv.Atoi(amount)
 	_, err := db.conn.Exec(ctx, "UPDATE Balance SET user_balance = user_balance - $1 WHERE user_id = $2", t_amount, userID)

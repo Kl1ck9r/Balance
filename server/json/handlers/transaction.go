@@ -14,6 +14,7 @@ type transaction struct {
 	ToID   int64  `json:"to_id"`
 	FromID int64  `json:"from_id"`
 	Amount string `json:"amount"`
+	Descrption string `json:"description"`
 }
 
 type ResponseBalance struct {
