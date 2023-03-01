@@ -39,7 +39,7 @@ func Conv(curr, balance string, wrt http.ResponseWriter) (string, string, error)
 		curr = "German"
 		balance = german
 		return curr, balance, nil
-	} else if curr == "RUB" {
+	} else {
 		curr = "RUB"
 		rub_balance := balance
 		return curr, rub_balance, nil

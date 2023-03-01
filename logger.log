@@ -1,30 +1,43 @@
-{"level":"info","ts":1677514666.9024363,"msg":"Database success connected"}
-{"level":"error","ts":1677514666.9234903,"msg":"ОШИБКА: столбец \"user_balance\" не существует (SQLSTATE 42703)Unable to scan in variable"}
-{"level":"info","ts":1677514736.5182,"msg":"Database success connected"}
-{"level":"error","ts":1677514736.5371313,"msg":"ОШИБКА: столбец \"user_balance\" не существует (SQLSTATE 42703)Unable to scan in variable"}
-{"level":"info","ts":1677514885.7187796,"msg":"Database success connected"}
-{"level":"error","ts":1677514885.739926,"msg":"ОШИБКА: аргумент конструкции WHERE должен иметь тип boolean, а не integer (SQLSTATE 42804)Unable to scan in variable"}
-{"level":"info","ts":1677514910.780327,"msg":"Database success connected"}
-{"level":"info","ts":1677515225.2594333,"msg":"Database success connected"}
-{"level":"info","ts":1677525168.434818,"msg":"Database success connected"}
-{"level":"error","ts":1677525168.4684439,"msg":"strconv.ParseFloat: parsing \"EUR\": invalid syntaxFailed to convert rubles to euro"}
-{"level":"info","ts":1677525233.2739067,"msg":"Database success connected"}
-{"level":"error","ts":1677525233.27699,"msg":"strconv.ParseFloat: parsing \"EUR\": invalid syntaxFailed to convert rubles to euro"}
-{"level":"info","ts":1677525337.9696202,"msg":"Database success connected"}
-{"level":"error","ts":1677525337.973881,"msg":"strconv.ParseFloat: parsing \"EUR\": invalid syntaxFailed to convert rubles to euro"}
-{"level":"info","ts":1677525708.0625944,"msg":"Database success connected"}
-{"level":"info","ts":1677525778.992091,"msg":"Database success connected"}
-{"level":"info","ts":1677525830.1049984,"msg":"Database success connected"}
-{"level":"info","ts":1677525856.021098,"msg":"Database success connected"}
-{"level":"info","ts":1677526306.5870883,"msg":"Database success connected"}
-{"level":"info","ts":1677526602.7217748,"msg":"Database success connected"}
-{"level":"info","ts":1677526651.6939085,"msg":"Database success connected"}
-{"level":"info","ts":1677526654.5984907,"msg":"Database success connected"}
-{"level":"info","ts":1677526670.5606565,"msg":"Database success connected"}
-{"level":"info","ts":1677526728.5707223,"msg":"Database success connected"}
-{"level":"info","ts":1677529163.546885,"msg":"Database success connected"}
-{"level":"info","ts":1677529171.8510387,"msg":"Database success connected"}
-{"level":"info","ts":1677529192.2643454,"msg":"Database success connected"}
-{"level":"info","ts":1677529413.8941548,"msg":"Database success connected"}
-{"level":"info","ts":1677529454.1240854,"msg":"Database success connected"}
-{"level":"info","ts":1677529618.658124,"msg":"Database success connected"}
+
+{"level":"info","ts":1677683495.897815,"msg":"Database success connected"}
+{"level":"info","ts":1677683520.2455647,"msg":"Database success connected"}
+{"level":"info","ts":1677683534.2456555,"msg":"Database success connected"}
+{"level":"info","ts":1677683608.782496,"msg":"Database success connected"}
+{"level":"info","ts":1677683618.2902596,"msg":"Database success connected"}
+{"level":"info","ts":1677683668.512163,"msg":"Database success connected"}
+{"level":"info","ts":1677683758.0449338,"msg":"Database success connected"}
+{"level":"info","ts":1677683858.5912805,"msg":"Database success connected"}
+{"level":"info","ts":1677683928.8661835,"msg":"Database success connected"}
+{"level":"info","ts":1677685195.9495647,"msg":"Database success connected"}
+{"level":"info","ts":1677685196.0793803,"msg":"Database success connected"}
+{"level":"info","ts":1677685376.730753,"msg":"Database success connected"}
+{"level":"info","ts":1677685376.9850304,"msg":"Database success connected"}
+{"level":"info","ts":1677685575.525169,"msg":"Database success connected"}
+{"level":"info","ts":1677685575.6320508,"msg":"Database success connected"}
+{"level":"info","ts":1677688508.4384656,"msg":"Database success connected"}
+{"level":"info","ts":1677688508.602684,"msg":"Database success connected"}
+{"level":"info","ts":1677688508.8685203,"msg":"Database success connected"}
+{"level":"info","ts":1677688679.802707,"msg":"Database success connected"}
+{"level":"info","ts":1677688679.9405174,"msg":"Database success connected"}
+{"level":"info","ts":1677688680.2378798,"msg":"Database success connected"}
+{"level":"info","ts":1677688680.4492376,"msg":"Database success connected"}
+{"level":"info","ts":1677688812.3562014,"msg":"Database success connected"}
+{"level":"info","ts":1677688812.4912684,"msg":"Database success connected"}
+{"level":"info","ts":1677688812.722463,"msg":"Database success connected"}
+{"level":"info","ts":1677688812.9235137,"msg":"Database success connected"}
+{"level":"info","ts":1677688943.758206,"msg":"Database success connected"}
+{"level":"info","ts":1677688944.1529763,"msg":"Database success connected"}
+{"level":"info","ts":1677688944.615415,"msg":"Database success connected"}
+{"level":"info","ts":1677688944.8486853,"msg":"Database success connected"}
+{"level":"info","ts":1677689131.7850168,"msg":"Database success connected"}
+{"level":"info","ts":1677689131.8865035,"msg":"Database success connected"}
+{"level":"info","ts":1677689132.0941062,"msg":"Database success connected"}
+{"level":"info","ts":1677689132.2001784,"msg":"Database success connected"}
+{"level":"info","ts":1677689153.1741507,"msg":"Database success connected"}
+{"level":"info","ts":1677689153.2960014,"msg":"Database success connected"}
+{"level":"info","ts":1677689153.5185874,"msg":"Database success connected"}
+{"level":"info","ts":1677689153.7286139,"msg":"Database success connected"}
+{"level":"info","ts":1677689190.2078416,"msg":"Database success connected"}
+{"level":"info","ts":1677689190.5413306,"msg":"Database success connected"}
+{"level":"info","ts":1677689190.7242541,"msg":"Database success connected"}
+{"level":"info","ts":1677689190.877157,"msg":"Database success connected"}

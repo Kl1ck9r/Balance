@@ -1,8 +1,8 @@
-DROP TABLE  IF EXISTs Balance 
+DROP TABLE  IF EXISTS Balance 
 
 
 CREATE TABLE Balance(
     User_ID SERIAL PRIMARY KEY,
-    Balance VARCHAR(244),
+    Balance INTEGER NOT NULL DEFAULT 0,
     Currency VARCHAR(244),
 )

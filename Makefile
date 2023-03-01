@@ -13,6 +13,7 @@ build:
 
 .PHONY: docker-compose
 docker-compose:
+	docker-compose up 
 
 .PHONY: docker-down
 docker-down:

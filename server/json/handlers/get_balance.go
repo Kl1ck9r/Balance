@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/balance/api/database/methods"
 	"github.com/balance/api/exchange"
@@ -12,7 +13,7 @@ import (
 )
 
 type GetUserBalance struct {
-	User     int64  `json:"id_user"`
+	UserID   int64  `json:"id_user"`
 	Currency string `json:"currency"`
 }
 
@@ -33,16 +34,18 @@ func Get(wrt http.ResponseWriter, req *http.Request) {
 
 	ctx := context.Background()
 	var db methods.Postgres
-	bl, cr, err := db.GetBalance(ctx, get.User)
+	bl, cr, err := db.GetBalance(ctx, get.UserID)
 	if err != nil {
 		js.WriteJsError(wrt, fmt.Errorf("Not Found user :%w", err), http.StatusBadRequest)
 		return
 	}
 
+	conv_balance := strconv.FormatInt(bl, 36)
+
 	balance := &BalanceUser{
 		Ok:       true,
 		Currency: cr,
-		Balance:  bl,
+		Balance:  conv_balance,
 	}
 
 	newCurrency, newBalance, err := exchange.Conv(get.Currency, balance.Balance, wrt) // this method will convert currency if will want user
