@@ -1,13 +1,9 @@
 package main
 
 import (
-	"github.com/balance/api/server/json/router"
-//	"log"
-	//"net/http"
+	"github.com/balance/api/app"
 )
 
 func main() {
-	//r := router.InitRouters()
-	
-	router.InitRouters()
+	app.Start()
 }

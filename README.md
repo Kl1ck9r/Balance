@@ -196,7 +196,7 @@ Response :
 ```
 
 
-### `/delete` -  replenish user balance 
+### `/delete` -  Delete User Balance
 
 * Method: `DELETE`
 
@@ -222,6 +222,46 @@ Response :
 {
     "ok": false,
     "error": "Failed delete user [DB]:Wrong enter user id",
+    "status": 400
+}
+```
+
+### `/get/list/transactions` -  Get User Transactions
+
+* Method: `Get`
+
+```json5
+Request :
+{
+    "user_id":1,
+    "limit":2
+}
+```
+
+```json5
+Response :
+[
+    {
+        "to_id": 1,
+        "from_id": 2,
+        "amount": "25",
+        "descrption": "User with: 2 sent 100 to 1"
+    },
+    {
+        "to_id": 1,
+        "from_id": 3,
+        "amount": "25",
+        "descrption": "Amount has been transffered: 100 fromID: 3 toID 1"
+    }
+]
+
+```
+#### Possible error:
+
+```json5
+{
+    "ok": false,
+    "error": "Error get list transactions:User id cannot is negative",
     "status": 400
 }
 ```

@@ -31,6 +31,11 @@ func DescreaseBalance(wrt http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	if descrease.UserID <= 0 {
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
+		return
+	}
+
 	var db methods.Postgres
 	err = db.DescreaseUserBalance(context.Background(), descrease.UserID, descrease.Amount)
 	if err != nil {

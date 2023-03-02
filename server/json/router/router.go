@@ -4,19 +4,18 @@ import (
 	"github.com/balance/api/server/json/handlers"
 	"github.com/balance/api/server/json/middleware"
 	"github.com/gorilla/mux"
-	"log"
 	"net/http"
 )
 
-func InitRouters() {
-	router := mux.NewRouter()
-	router.Use(middleware.JsonMiddleware)
+var APIRouter =  mux.NewRouter()
 
-	router.HandleFunc("/get", handlers.Get).Methods(http.MethodGet)
-	router.HandleFunc("/replenish/balance", handlers.ReplenishBalance).Methods(http.MethodPost)
-	router.HandleFunc("/descrease", handlers.DescreaseBalance).Methods(http.MethodPost)
-	router.HandleFunc("/transaction", handlers.Transaction).Methods(http.MethodPost)
-	router.HandleFunc("/delete", handlers.DeleteBalance).Methods(http.MethodDelete)
+func Init() {
+	APIRouter.Use(middleware.JsonMiddleware)
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	APIRouter.HandleFunc("/get", handlers.Get).Methods(http.MethodGet)
+	APIRouter.HandleFunc("/replenish/balance", handlers.ReplenishBalance).Methods(http.MethodPost)
+	APIRouter.HandleFunc("/descrease", handlers.DescreaseBalance).Methods(http.MethodPost)
+	APIRouter.HandleFunc("/transaction", handlers.Transaction).Methods(http.MethodPost)
+	APIRouter.HandleFunc("/delete", handlers.DeleteBalance).Methods(http.MethodDelete)
+	APIRouter.HandleFunc("/get/list/transactions",handlers.GetTransaction).Methods(http.MethodGet)
 }

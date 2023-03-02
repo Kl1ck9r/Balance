@@ -1,8 +1,19 @@
 DROP TABLE  IF EXISTS Balance 
 
+DROP TABLE IF EXISTS Transactions
 
 CREATE TABLE Balance(
     User_ID SERIAL PRIMARY KEY,
     Balance INTEGER NOT NULL DEFAULT 0,
-    Currency VARCHAR(244),
+    Currency VARCHAR(244) NOT NULL, 
 )
+
+CREATE TABLE Transactions(
+    ToID SERIAL NOT NULL UNIQUE,
+    FromID SERIAL NOT NULL UNIQUE,
+    Amount BIGINT NOT NULL,
+    Description VARCHAR(244)
+)
+
+
+

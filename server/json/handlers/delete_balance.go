@@ -30,6 +30,11 @@ func DeleteBalance(wrt http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	if deleteUser.UserID <= 0 {
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
+		return
+	}
+
 	var db methods.Postgres
 	err = db.DeleteBalance(context.Background(), deleteUser.UserID)
 	if err != nil {

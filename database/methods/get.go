@@ -4,13 +4,14 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/balance/api/database"
 	"strconv"
+
+	"github.com/balance/api/database"
 )
 
 func (db Postgres) GetBalance(ctx context.Context, userID int64) (int64, string, error) {
 	if userID <= 0 {
-		return 0, "", fmt.Errorf("Wrong enter user id")
+		return 0, "",fmt.Errorf("UserID cannot be negative")
 	}
 
 	db.conn = database.ConnectDB()

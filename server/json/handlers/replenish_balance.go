@@ -34,6 +34,12 @@ func ReplenishBalance(wrt http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	if refillBalance.UserID <= 0 {
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
+		return
+	}
+
+
 	balance, err := strconv.Atoi(refillBalance.Amount)
 	if err != nil {
 		lgzap.Error(err.Error() + "Failed to convert string in number")

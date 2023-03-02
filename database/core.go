@@ -13,7 +13,7 @@ import (
 var lgzap, _ = zap.InitLogger()
 
 func init() {
-	if err := godotenv.Load(".env"); err != nil {
+	if err := godotenv.Load("C:/Users/Ruslan/Desktop/BalanceAPI/.env"); err != nil {
 		lgzap.Error(err.Error() + " :Not Found .env file")
 	}
 }

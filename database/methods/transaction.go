@@ -33,6 +33,16 @@ func (p Postgres) TransactionBalance(ctx context.Context, toID, fromID int64, am
 	if err != nil {
 		lgzap.Error(err.Error() + "transaction failed")
 		return "", "", err
+	} else {
+		descrt := "Amount has been transffered: " + amount + " fromID: " + fmt.Sprint(fromID) + " toID " + fmt.Sprint(toID)
+		amountInt, _ := strconv.ParseInt(amount, 12, 36)
+		sqlInsert := `INSERT INTO Transaction(toID,fromID,amount,description)
+		VALUES($1,$2,$3,$4)`
+		_, err := p.conn.Exec(ctx, sqlInsert, toID, fromID, amountInt, descrt)
+		if err != nil {
+			lgzap.Error(err.Error() + "Unable to add transaction to database")
+			return "", "", err
+		}
 	}
 
 	balanceToID, _, err := p.GetBalance(ctx, toID)

@@ -32,6 +32,11 @@ func Get(wrt http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	if get.UserID <= 0 {
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
+		return
+	}
+
 	ctx := context.Background()
 	var db methods.Postgres
 	bl, cr, err := db.GetBalance(ctx, get.UserID)

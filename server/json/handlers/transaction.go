@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/balance/api/database/methods"
 	js_error "github.com/balance/api/utils/error"
@@ -29,6 +30,22 @@ func Transaction(wrt http.ResponseWriter, req *http.Request) {
 	err := json.NewDecoder(req.Body).Decode(&transfer)
 	if err != nil {
 		js.WriteJsError(wrt, fmt.Errorf("Failed decode: %v", err), http.StatusBadRequest)
+		return
+	}
+
+	if transfer.ToID <= 0 {
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
+		return
+	}
+
+	if transfer.FromID <= 0 {
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
+		return
+	}
+
+	amountInt,_:=strconv.ParseInt(transfer.Amount,12,36)
+	if amountInt <=0{
+		js.WriteJsError(wrt, fmt.Errorf("User id cannot be negative :%v", err), http.StatusBadRequest)
 		return
 	}
 
