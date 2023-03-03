@@ -12,7 +12,7 @@ var APIRouter =  mux.NewRouter()
 func Init() {
 	APIRouter.Use(middleware.JsonMiddleware)
 
-	APIRouter.HandleFunc("/get", handlers.Get).Methods(http.MethodGet)
+	APIRouter.HandleFunc("/get", handlers.GetBalance).Methods(http.MethodGet)
 	APIRouter.HandleFunc("/replenish/balance", handlers.ReplenishBalance).Methods(http.MethodPost)
 	APIRouter.HandleFunc("/descrease", handlers.DescreaseBalance).Methods(http.MethodPost)
 	APIRouter.HandleFunc("/transaction", handlers.Transaction).Methods(http.MethodPost)

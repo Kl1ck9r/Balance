@@ -1,0 +1,5 @@
+{"level":"info","ts":1677859602.3769364,"msg":"Database success connected"}
+{"level":"info","ts":1677859602.5677872,"msg":"Database success connected"}
+{"level":"info","ts":1677859602.8301086,"msg":"Database success connected"}
+{"level":"info","ts":1677859602.9631433,"msg":"Database success connected"}
+{"level":"error","ts":1677859602.965596,"msg":"no rows in result setUnable to scan in variable"}

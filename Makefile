@@ -35,6 +35,7 @@ docker-stop:
 
 .PHONY: unit-test
 unit-test:
+	go test ./...
 
 
 .PHONY: integrations-test

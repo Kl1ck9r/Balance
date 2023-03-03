@@ -244,13 +244,13 @@ Response :
     {
         "to_id": 1,
         "from_id": 2,
-        "amount": "25",
+        "amount": "100",
         "descrption": "User with: 2 sent 100 to 1"
     },
     {
         "to_id": 1,
         "from_id": 3,
-        "amount": "25",
+        "amount": "100",
         "descrption": "Amount has been transffered: 100 fromID: 3 toID 1"
     }
 ]

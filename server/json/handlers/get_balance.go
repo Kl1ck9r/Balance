@@ -23,7 +23,7 @@ type BalanceUser struct {
 	Balance  string `json:"balance"`  // balance user(200$,3000₽,5000₴)
 }
 
-func Get(wrt http.ResponseWriter, req *http.Request) {
+func GetBalance(wrt http.ResponseWriter, req *http.Request) {
 	var js js_error.JsonError
 	var get GetUserBalance
 	err := json.NewDecoder(req.Body).Decode(&get)
