@@ -29,9 +29,7 @@ make run
 ```
 
 ## Tests
-* [] Mocks
-* [] Unit 
-* [] Integrations 
+* [x] Unit 
 
 ```shell
 make test 
