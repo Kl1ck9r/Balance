@@ -4,8 +4,8 @@
 ---
 ### 1. Requirements
 
-* **PostgreSQL:** `14.2`
-* **Go:** `1.17`
+* **PostgreSQL:** `17.2`
+* **Go:** `20.0`
 
 ## docker-compose
 Server is ready immediately after containers are up
