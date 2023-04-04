@@ -1,5 +1,5 @@
 # Balance JSON API
-## Test task for the position of trainee golang backend develope
+## Test task for the position of trainee golang backend developer
 
 ---
 ### 1. Requirements
